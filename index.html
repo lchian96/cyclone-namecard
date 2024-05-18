@@ -51,21 +51,52 @@
 
         .card img.profile {
             border-radius: 50%;
-            width: 60%;
+            width: 65%;
             height: auto;
             object-fit: cover;
         }
 
         .card h1 {
             font-size: 7vw;
-            margin: 5% 0 8px;
+            margin: 5% 0 5px;
         }
 
         .card h2 {
             font-size: 5vw;
-            margin: 0 0 27px;
+            margin: 0 0 0px;
             color: #bbb;
         }
+
+        .card .copy-button {
+            font-size: 3vw;
+            /* Smaller font size */
+            color: #110f0f;
+            opacity: 0.35;
+            background-color: #d7d5d5;
+            border: none;
+            padding: 8px 16px;
+            margin-top: 8.5px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: block;
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: bold;
+        }
+
+        .card .copy-button:hover {
+            background-color: #555;
+            /* Slightly lighter on hover */
+        }
+
+        .card .copy-button:active {
+            background-color: #666;
+            /* Darken on active */
+        }
+
 
         .buttons {
             display: flex;
@@ -133,18 +164,20 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
+
         .link:hover {
             background-color: #777;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
             transform: translateY(-2px);
         }
+
         .links:active {
             transform: translateY(1px);
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
         }
 
         .card img.logo {
-            margin-top: 5%;
+            margin-top: 12px;
             width: 38%;
             height: auto;
         }
@@ -152,11 +185,11 @@
 </head>
 
 <body>
-
     <div class="card">
         <img src="profile_picture.png" alt="Profile Picture" class="profile">
         <h1>Anthony Lai</h1>
         <h2>Solutions Consultant</h2>
+        <button onclick="copyPhoneNumber()" class="copy-button">Copy +60174573957</button>
         <div class="buttons">
             <a href="https://wa.me/60174573957" target="_blank" class="whatsapp"><span><img src="whatsapp_icon.png"
                         alt="WhatsApp" class="icon"></span></a>
@@ -164,12 +197,20 @@
                         class="icon"></span></a>
         </div>
         <a href="https://maps.app.goo.gl/Hvdjmq16WrhYMU3x5" target="_blank" class="link"><span><img src="map.png"
-                    alt="Locate Us" class="icon"></span>Office Location</a>
+                    alt="Office Location" class="icon"></span>Office Location</a>
         <a href="http://en.cyclone-robotics.com" target="_blank" class="link"><span><img src="link.gif"
-                    alt="Visit Our Website" class="icon"></span>Official Website</a>
+                    alt="Visit Official Website" class="icon"></span>Official Website</a>
         <img src="cyclone_logo.png" alt="Cyclone Robotics Logo" class="logo">
     </div>
-
+    <script>
+        function copyPhoneNumber() {
+            navigator.clipboard.writeText('+60174573957').then(function () {
+                alert('Phone number copied!');
+            }, function (err) {
+                console.error('Could not copy text: ', err);
+            });
+        }
+    </script>
 </body>
 
 </html>
