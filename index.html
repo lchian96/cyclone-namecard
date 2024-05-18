@@ -181,10 +181,40 @@
             width: 38%;
             height: auto;
         }
+
+        .desktop-warning {
+            display: none;
+            background-color: #ffdddd;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ff0000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        @media (min-width: 769px) {
+
+            /* Adjust this value based on your needs */
+            .desktop-warning {
+                display: block;
+            }
+
+            .card {
+                display: none;
+                /* Hide the card on desktop */
+            }
+        }
     </style>
 </head>
 
 <body>
+    <div class="desktop-warning">
+        This page is optimized for mobile devices. Please access it on a mobile device.
+    </div>
     <div class="card">
         <img src="profile_picture.png" alt="Profile Picture" class="profile">
         <h1>Anthony Lai</h1>
