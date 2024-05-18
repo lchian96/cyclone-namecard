@@ -77,7 +77,6 @@
 
         .buttons a {
             width: 47%;
-            /* This creates the square aspect ratio */
             position: relative;
             border-radius: 13px;
             display: flex;
@@ -88,19 +87,27 @@
             text-decoration: none;
             transition: background-color 0.3s, box-shadow 0.3s;
             margin: 0px;
+            padding: 12px 0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .buttons a:hover {
             background-color: #777;
-            box-shadow: 0 0 10px rgba(185, 229, 8, 0.3);
+            box-shadow: 0 4px 8px rgba(185, 229, 8, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .buttons a:active {
+            transform: translateY(1px);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
         }
 
         .buttons a.whatsapp {
-            background-color: rgba(226, 240, 217, 1);
+            background-color: rgba(226, 240, 217, 0.44);
         }
 
         .buttons a.email {
-            background-color: rgba(143, 170, 225, 1);
+            background-color: rgba(143, 170, 225, 0.55);
         }
 
         .buttons img.icon {
@@ -124,14 +131,19 @@
             color: #151010;
             transition: background-color 0.3s, box-shadow 0.3s;
             font-size: 5.5vw;
-            background-color: rgba(243, 243, 243, 1);
+            background-color: rgba(243, 243, 243, 0.55);
             font-weight: bold;
-            /* Added to bold the text */
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .link:hover {
             background-color: #777;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        .links:active {
+            transform: translateY(1px);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
         }
 
         .card img.logo {
